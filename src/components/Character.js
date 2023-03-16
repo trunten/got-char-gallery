@@ -4,9 +4,7 @@ export default function Character({height, race, gender, birth, spouse, death, r
       <div data-test="component-character" className="card h-100 shadow">
         <div className="card-header">
           <h2 data-test="char-name" className="mb-4 text-center">{name}</h2>
-          {/* <div className="img-wrapper card-img-top p-4" style={{height:"300px"}}> */}
             <img data-test="char-img" src={imgUrl} alt={name} className="card-img-top d-block mx-auto mb-4" style={{height: "auto", width: "auto", maxHeight: "200px", minHeight: "200px"}}></img>
-          {/* </div> */}
         </div>
         <div className="card-body d-flex flex-column justify-content-between">
           <ul data-test="char-list" className="list-unstyled">
