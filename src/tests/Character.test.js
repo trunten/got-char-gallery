@@ -9,18 +9,18 @@ const setup = (props) => shallow(<Character {...props} />)
 const findByTestAttr = (wrapper, val) => wrapper.find(`[data-test='${val}']`)
 
 const samwiseGamgee = {
-    "_id": "5cd99d4bde30eff6ebccfd0d",
-    "height": "1.22m (4'0\")",
-    "race": "Hobbit",
-    "gender": "Male",
-    "birth": "April 6 ,2980",
-    "spouse": "Rosie Cotton",
-    "death": "Still alive, after going to the ,Undying Lands, in ,FO 61",
-    "realm": "",
-    "hair": "Blond (movie)",
-    "name": "Samwise Gamgee",
-    "wikiUrl": "http://lotr.wikia.com//wiki/Samwise_Gamgee",
-    "imgUrl": "https://www.frontporchrepublic.com/wp-content/uploads/2011/05/Samwise-Gamgee.jpg"
+  "_id": "5cd99d4bde30eff6ebccfd0d",
+  "height": "1.22m (4'0\")",
+  "race": "Hobbit",
+  "gender": "Male",
+  "birth": "April 6 ,2980",
+  "spouse": "Rosie Cotton",
+  "death": "Still alive after going to the Undying Lands in FO 61",
+  "realm": "The Shire",
+  "hair": "Blond (movie)",
+  "name": "Samwise Gamgee",
+  "wikiUrl": "http://lotr.wikia.com//wiki/Samwise_Gamgee",
+  "imgUrl": "https://static.wikia.nocookie.net/lotr/images/2/20/Sam.jpg"
 }
 
 it('Character Component Renders Without Error', () => {
@@ -126,7 +126,7 @@ describe('Character Component Renders Props', () => {
 
     it("Renders the Character's Spouse", () => {
         const charSpouse = findByTestAttr(wrapper, "char-spouse").text()
-
+        
         expect(charSpouse).toBe(`Spouse: ${samwiseGamgee.spouse}`)
     })
 
